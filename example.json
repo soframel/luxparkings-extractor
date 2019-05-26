@@ -1,0 +1,380 @@
+{
+  "user": "admin",
+  "postDate": "2019-05-26T11:05:09.896947",
+  "message": {
+    "parking": [
+      {
+        "id": "20",
+        "title": "Adenauer",
+        "total": 414,
+        "actuel": 409,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.63,
+          "longitude": 6.15733
+        }
+      },
+      {
+        "id": "14",
+        "title": "Auchan",
+        "total": 0,
+        "actuel": 0,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 1,
+        "coords": {
+          "latitude": 49.63233,
+          "longitude": 6.17133
+        }
+      },
+      {
+        "id": "28",
+        "title": "Beggen",
+        "total": 0,
+        "actuel": 0,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.65,
+          "longitude": 6.12783
+        }
+      },
+      {
+        "id": "27",
+        "title": "Bouillon",
+        "total": 2442,
+        "actuel": 2297,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.59933,
+          "longitude": 6.10567
+        }
+      },
+      {
+        "id": "29",
+        "title": "Brasserie",
+        "total": 270,
+        "actuel": 265,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.6119,
+          "longitude": 6.1414
+        }
+      },
+      {
+        "id": "18",
+        "title": "Coque 1",
+        "total": 211,
+        "actuel": 121,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.62433,
+          "longitude": 6.15116
+        }
+      },
+      {
+        "id": "17",
+        "title": "Coque 2",
+        "total": 0,
+        "actuel": 0,
+        "tendance": 0,
+        "ouvert": -1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.6225,
+          "longitude": 6.151
+        }
+      },
+      {
+        "id": "11",
+        "title": "Fort Neipperg",
+        "total": 0,
+        "actuel": 0,
+        "tendance": 0,
+        "ouvert": 0,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.602,
+          "longitude": 6.13483
+        }
+      },
+      {
+        "id": "10",
+        "title": "Fort Wedell",
+        "total": 310,
+        "actuel": 218,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.5995,
+          "longitude": 6.12933
+        }
+      },
+      {
+        "id": "19",
+        "title": "Gare",
+        "total": 533,
+        "actuel": 52,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.59833,
+          "longitude": 6.13267
+        }
+      },
+      {
+        "id": "22",
+        "title": "Glacis",
+        "total": 0,
+        "actuel": 0,
+        "tendance": 0,
+        "ouvert": -1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.61583,
+          "longitude": 6.12217
+        }
+      },
+      {
+        "id": "4",
+        "title": "Knuedler",
+        "total": 350,
+        "actuel": 119,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.61014,
+          "longitude": 6.1297
+        }
+      },
+      {
+        "id": "26",
+        "title": "Kockelscheuer",
+        "total": 552,
+        "actuel": 527,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.565,
+          "longitude": 6.10883
+        }
+      },
+      {
+        "id": "25",
+        "title": "Luxembourg Sud A",
+        "total": 811,
+        "actuel": 738,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.5775,
+          "longitude": 6.12833
+        }
+      },
+      {
+        "id": "23",
+        "title": "Luxexpo",
+        "total": 0,
+        "actuel": 0,
+        "tendance": 0,
+        "ouvert": -1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.63533,
+          "longitude": 6.17467
+        }
+      },
+      {
+        "id": "8",
+        "title": "Martyrs",
+        "total": 250,
+        "actuel": 250,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.60467,
+          "longitude": 6.12883
+        }
+      },
+      {
+        "id": "6",
+        "title": "Monterey",
+        "total": 340,
+        "actuel": 295,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.61009,
+          "longitude": 6.12284
+        }
+      },
+      {
+        "id": "30",
+        "title": "Nobilis",
+        "total": 115,
+        "actuel": 89,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.602454,
+          "longitude": 6.134845
+        }
+      },
+      {
+        "id": "15",
+        "title": "Place de l\u0027Europe",
+        "total": 800,
+        "actuel": 784,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.61983,
+          "longitude": 6.144
+        }
+      },
+      {
+        "id": "9",
+        "title": "Rocade",
+        "total": 200,
+        "actuel": 199,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.60317,
+          "longitude": 6.1365
+        }
+      },
+      {
+        "id": "7",
+        "title": "Rond Point Schuman",
+        "total": 400,
+        "actuel": 384,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.618,
+          "longitude": 6.12517
+        }
+      },
+      {
+        "id": "36",
+        "title": "Royal-Hamilius",
+        "total": 575,
+        "actuel": 530,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.612076,
+          "longitude": 6.126683
+        }
+      },
+      {
+        "id": "3",
+        "title": "Saint-Esprit",
+        "total": 162,
+        "actuel": 41,
+        "tendance": 1,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.6085,
+          "longitude": 6.13225
+        }
+      },
+      {
+        "id": "21",
+        "title": "Stade",
+        "total": 400,
+        "actuel": 399,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.614,
+          "longitude": 6.1085
+        }
+      },
+      {
+        "id": "1",
+        "title": "Th\u00e9\u00e2tre",
+        "total": 335,
+        "actuel": 114,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.61308,
+          "longitude": 6.13016
+        }
+      },
+      {
+        "id": "16",
+        "title": "Trois Glands",
+        "total": 500,
+        "actuel": 450,
+        "tendance": 0,
+        "ouvert": 1,
+        "complet": 0,
+        "coords": {
+          "latitude": 49.61717,
+          "longitude": 6.14267
+        }
+      }
+    ],
+    "neighborhood": [
+      {
+        "total": 2832,
+        "tendance": 0,
+        "actuel": 2147,
+        "tendance_average": 0.1111111111111111,
+        "slug": "centre",
+        "title": "Centre"
+      },
+      {
+        "total": 1408,
+        "tendance": 0,
+        "actuel": 808,
+        "tendance_average": 0,
+        "slug": "gare",
+        "title": "Gare"
+      },
+      {
+        "total": 1925,
+        "tendance": 0,
+        "actuel": 1764,
+        "tendance_average": 0,
+        "slug": "kirchberg",
+        "title": "Kirchberg"
+      },
+      {
+        "total": 3805,
+        "tendance": 0,
+        "actuel": 3562,
+        "tendance_average": 0,
+        "slug": "park-and-ride",
+        "title": "P+R"
+      }
+    ]
+  }
+}
