@@ -7,6 +7,7 @@ import org.elasticsearch.client.RequestOptions
 import org.elasticsearch.client.RestClient
 import org.elasticsearch.client.RestHighLevelClient
 import org.elasticsearch.common.xcontent.XContentType
+import org.soframel.mobility.luxparkings.exceptions.PasswordMissingException
 import java.time.Instant
 import java.util.*
 
@@ -30,6 +31,10 @@ class ElasticSender {
         //build options
         username= LuxParkingsProperties.getProperty("luxparkings.elastic.username")
         val pwd=System.getProperty("elastic.password")
+        if(pwd==null || pwd.equals("")){
+            throw PasswordMissingException("no password for user $username")
+        }
+
         val auth=username+":"+pwd
         val token= Base64.getEncoder().encodeToString(auth.toByteArray())
         val builder = RequestOptions.DEFAULT.toBuilder()
