@@ -1,4 +1,4 @@
-package org.soframel.mobility.exceptions
+package org.soframel.mobility.luxparkings.exceptions
 
 class IncorrectDataException(message: String?) : Exception(message) {
 }

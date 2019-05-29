@@ -1,17 +1,21 @@
-package org.soframel.mobility
+package org.soframel.mobility.luxparkings
 
+import org.apache.logging.log4j.LogManager
 import org.json.JSONArray
 import org.json.JSONObject
-import org.soframel.mobility.exceptions.IncorrectDataException
+import org.soframel.mobility.luxparkings.exceptions.IncorrectDataException
 
 class VDLJSONExtractor {
-    val url="https://www.vdl.lu/parking/data.json"
+    val url= LuxParkingsProperties.getProperty("luxparkings.data.url")
+
+    val logger = LogManager.getLogger(VDLJSONExtractor::class.java!!.getName())
 
     @Throws(IncorrectDataException::class)
     fun getParkingJSON(): String{
-        val response=khttp.get(url)
+        val response=khttp.get(url!!)
 
         if(response!=null && response.statusCode==200){
+            logger.debug("Fetching data: got response from server")
             return response.text
         }
         else{

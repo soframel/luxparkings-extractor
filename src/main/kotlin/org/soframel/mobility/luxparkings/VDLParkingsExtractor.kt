@@ -1,14 +1,14 @@
-package org.soframel.mobility
+package org.soframel.mobility.luxparkings
 
 import java.lang.System.exit
 
 fun main(args: Array<String>) {
 
-    val extractor=VDLJSONExtractor()
+    val extractor= VDLJSONExtractor()
     val jsonString=extractor.getParkingJSON()
     val list=extractor.parseParkingsData(jsonString)
 
-    var sender=ElasticSender()
+    var sender= ElasticSender()
 
     for(p in list) {
         val name=p["title"]

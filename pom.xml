@@ -24,6 +24,11 @@
             <artifactId>elasticsearch-rest-high-level-client</artifactId>
             <version>${elastic.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.11.2</version>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
@@ -95,28 +100,13 @@
                             <transformers>
                                 <!-- add Main-Class to manifest file -->
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>org.soframel.mobility.VDLParkingsExtractorKt</mainClass>
+                                    <mainClass>org.soframel.mobility.luxparkings.VDLParkingsExtractorKt</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-
-
-           <!-- <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.6</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>org.soframel.mobility.VDLParkingsExtractorKt</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>-->
 
         </plugins>
     </build>
