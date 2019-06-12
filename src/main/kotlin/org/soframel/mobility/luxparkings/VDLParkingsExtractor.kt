@@ -4,22 +4,28 @@ import java.lang.System.exit
 
 fun main(args: Array<String>) {
 
-    val extractor= VDLJSONExtractor()
-    val jsonString=extractor.getParkingJSON()
-    val list=extractor.parseParkingsData(jsonString)
+    try {
+        val extractor = VDLJSONExtractor()
+        val jsonString = extractor.getParkingJSON()
+        val list = extractor.parseParkingsData(jsonString)
 
-    var sender= ElasticSender()
+        var sender = ElasticSender()
 
-    for(p in list) {
-        val name=p["title"]
-        if(name!=null && name is String) {
-            sender.sendToElastic(p.toString(), name)
+        for (p in list) {
+            val name = p["title"]
+            if (name != null && name is String) {
+                sender.sendToElastic(p.toString(), name)
+            } else {
+                println("parking with no name found !" + p)
+            }
         }
-        else{
-            println("parking with no name found !"+ p)
-        }
+
+        exit(0)
+
+    }catch (e: Exception){
+        println("Exception occured: "+e)
+        e.printStackTrace()
+        exit(1)
     }
-
-    exit(0)
 }
 

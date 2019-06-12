@@ -8,7 +8,10 @@ import org.elasticsearch.client.RestClient
 import org.elasticsearch.client.RestHighLevelClient
 import org.elasticsearch.common.xcontent.XContentType
 import org.soframel.mobility.luxparkings.exceptions.PasswordMissingException
+import java.time.Clock
 import java.time.Instant
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -48,15 +51,21 @@ class ElasticSender {
      */
     fun sendToElastic(json: String, parkingName: String?){
         val instant= Instant.now()
-        val formattedTime=instant.toString()
+        //date is interpreted by elasticsewarch, leave in UTC
+        val formattedDate=instant.toString()
+        //time is not, convert to local time
+        val time= LocalTime.now(Clock.systemDefaultZone())
+        //val formattedTime=time.format(DateTimeFormatter.ISO_LOCAL_TIME)
+        val formattedTime=this.formatTime(time)
 
         val request = IndexRequest("parkings")
-        request.id(parkingName+"_"+formattedTime)
+        request.id(parkingName+"_"+formattedDate)
         //removed                 "\"user\":\"admin\"," +
         val jsonString = "{" +
                 "\"user\":\""+username+"\"," +
-                "\"postDate\":\""+formattedTime+"\"," +
+                "\"postDate\":\""+formattedDate+"\"," +
                 "\"parkingName\":\""+parkingName+"\"," +
+                "\"time\":\""+formattedTime+"\"," +
                 "\"message\":"+json +
                 "}"
         request.source(jsonString, XContentType.JSON)
@@ -65,5 +74,18 @@ class ElasticSender {
 
         val indexResponse = client.index(request, options)
         logger.info("elastic response="+indexResponse)
+    }
+
+    fun formatTime(time: LocalTime): String{
+        //String=time.hour.toString()+time.minute.toString()
+        var hour: String=time.hour.toString()
+        if(time.hour<10){
+            hour="0"+hour
+        }
+        var minutes: String=time.minute.toString()
+        if(time.minute<10){
+            minutes="0"+minutes
+        }
+        return hour+minutes
     }
 }
