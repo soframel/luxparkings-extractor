@@ -1,0 +1,65 @@
+{
+  "mapping": {
+    "properties": {
+      "message": {
+        "properties": {
+          "actuel": {
+            "type": "integer"
+          },
+          "complet": {
+            "type": "keyword"
+          },
+          "coords": {
+            "properties": {
+              "latitude": {
+                "type": "float"
+              },
+              "longitude": {
+                "type": "float"
+              }
+            }
+          },
+          "id": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "ouvert": {
+            "type": "keyword"
+          },
+          "tendance": {
+            "type": "keyword"
+          },
+          "title": {
+            "type": "keyword"
+          },
+          "total": {
+            "type": "long"
+          }
+        }
+      },
+      "parkingName": {
+        "type": "keyword"
+      },
+      "postDate": {
+        "type": "date"
+      },
+      "time": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 16
+          }
+        }
+      },
+      "user": {
+        "type": "keyword"
+      }
+    }
+  }
+}

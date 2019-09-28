@@ -1,7 +1,8 @@
-FROM openjdk:13-ea-19-jdk-alpine3.9
+#Oops, not to use which version is the right one !
+FROM openjdk:11
+#FROM openjdk:13
 
-#For systems with no cron
-#RUN apt-get update && apt-get install -y --no-install-recommends cron && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends cron && rm -rf /var/lib/apt/lists/*
 
 COPY target/luxparkings-extractor-1.0-SNAPSHOT.jar /usr/share/luxparkings/luxparkings-extractor.jar
 WORKDIR /usr/share/luxparkings/
@@ -15,10 +16,10 @@ RUN chmod 0600 /usr/share/luxparkings/luxparkings-cron
 # Apply cron job
 RUN crontab /usr/share/luxparkings/luxparkings-cron
 #fix link-count, as cron is being a pain, and docker is making hardlink count >0 (very high)
-#RUN touch /etc/crontab /etc/cron.*/*
+RUN touch /etc/crontab /etc/cron.*/*
 # Create the log file to be able to run tail
 RUN touch /var/log/cron.log
-#run cron
+# Command that was working on Alpine image:
 #CMD cron && tail -f /var/log/cron.log
-#CMD cron -f
-CMD crond -l 2 -f
+# On standard (debian-based) image:
+CMD cron -f
