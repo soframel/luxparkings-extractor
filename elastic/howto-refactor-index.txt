@@ -1,8 +1,13 @@
+0. shutdown parking extractor to prevent new data from being inserted (docker stop <id>)
+
 1. create parkings2 index (API) with mappings
 2. reindex API: POST _reindex
 3. delete parkings index
 4. create parkings index (API) with mappings
 5. reindex parkings2 -> parkings
+6. delete parkings 2
 
 
-Timelions -> remove .keyword after parkingName
+Manual steps:
+- in Kibana: Timelions -> remove .keyword after parkingName
+- restart luxparking extractor (docker start <id>)
