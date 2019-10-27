@@ -1,4 +1,5 @@
 .env
+.env*
 dependency-reduced-pom.xml
 .idea
 *.iml
