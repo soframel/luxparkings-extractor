@@ -1,21 +1,23 @@
 version: '3'
 services:
   luxparkings:
-    build: .
+    image: luxparkingsextractor_luxparkings
     env_file:
       - .env
     depends_on:
       - "elasticsearch"
+    restart: always
   elasticsearch:
     image: "elasticsearch:7.9.1"
     ports:
-    - "9200:9200"
-    - "9300:9300"
+      - "9200:9200"
+      - "9300:9300"
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=true
     volumes:
       - "esdata:/usr/share/elasticsearch/data"
+    restart: always
   kibana:
     image: "kibana:7.9.1"
     ports:
@@ -28,14 +30,16 @@ services:
       - ELASTICSEARCH_USERNAME=kibana
     volumes:
       - "eskibana:/usr/share/kibana/data"
+    restart: always
   luxparkings_server:
     image: "luxparkings-server:0.1"
     env_file:
       - .env-server
     ports:
       - "3000:3000"
+    restart: always
 volumes:
-    esdata:
-        external: true
-    eskibana:
-        external: true
+  esdata:
+    external: true
+  eskibana:
+    external: true

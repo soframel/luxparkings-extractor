@@ -3,7 +3,7 @@ FROM openjdk:13-ea-19-jdk-alpine3.9
 #For systems with no cron
 #RUN apt-get update && apt-get install -y --no-install-recommends cron && rm -rf /var/lib/apt/lists/*
 
-COPY target/luxparkings-extractor-1.0-SNAPSHOT.jar /usr/share/luxparkings/luxparkings-extractor.jar
+COPY target/luxparkings-extractor-1.1-SNAPSHOT.jar /usr/share/luxparkings/luxparkings-extractor.jar
 WORKDIR /usr/share/luxparkings/
 #create script
 RUN echo "java -Delastic.password=\${ELASTIC_PASSWORD} -jar /usr/share/luxparkings/luxparkings-extractor.jar" >> /usr/share/luxparkings/luxparkings
