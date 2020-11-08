@@ -28,12 +28,6 @@ services:
       - ELASTICSEARCH_USERNAME=kibana
     volumes:
       - "eskibana:/usr/share/kibana/data"
-  luxparkings_server:
-    image: "luxparkings-server:0.2"
-    env_file:
-      - .env-server
-    ports:
-      - "3000:3000"
 volumes:
     esdata:
         external: true
